@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NANO'S COFFEE - Cardápio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>NANO'S COFFEE</h1>
+            <p>Desde 2015 servindo o melhor café da região</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active" data-category="bebidas">Bebidas</a></li>
+                <li><a href="#" data-category="comidas">Comidas</a></li>
+                <li><a href="#" data-category="combos">Combos</a></li>
+                <li><a href="#" data-category="sobremesas">Sobremesas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="menu-container">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Pesquisar item...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="category-title">
+                <h2 id="current-category">Bebidas</h2>
+            </div>
+
+            <div class="menu-items" id="menu-items">
+                <!-- Itens serão carregados via JavaScript -->
+            </div>
+        </section>
+
+        <aside class="cart-container">
+            <h3>Seu Pedido <i class="fas fa-shopping-cart"></i></h3>
+            <div class="cart-items" id="cart-items">
+                <p class="empty-cart">Seu carrinho está vazio</p>
+            </div>
+            <div class="cart-total">
+                <p>Total: <span id="cart-total">R$ 0.00</span></p>
+                <button id="checkout-btn">Finalizar Pedido</button>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <h4>NANO'S COFFEE</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Rua do Café, 123 - Centro</p>
+            <p><i class="fas fa-phone"></i> (11) 98765-4321</p>
+            <p><i class="fas fa-clock"></i> Aberto de Seg-Sab: 7h-20h</p>
+        </div>
+        <div class="social-media">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </footer>
+
+    <div class="modal" id="item-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modal-image" src="" alt="">
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+            <div class="modal-price">
+                <span id="modal-price"></span>
+                <div class="quantity-control">
+                    <button class="quantity-btn minus"><i class="fas fa-minus"></i></button>
+                    <span class="quantity" id="modal-quantity">1</span>
+                    <button class="quantity-btn plus"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+            <button id="add-to-cart-btn">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
